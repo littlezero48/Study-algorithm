@@ -1,22 +1,17 @@
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
+
 class Solution {
     public long solution(long n) {
       
         long answer = 0;
         
-        ArrayList<Integer> num_arr = new ArrayList<Integer>();
+        char[] num_arr = Long.toString(n).toCharArray();       
+        Arrays.sort(num_arr);
         
-        for(int i=0; 0<n; i++){
-            num_arr.add((int) (n%10));
-            n /= 10;
-        }
-        
-        num_arr.sort(Comparator.naturalOrder());
         String merge = "";
-        int len = num_arr.size();
+        int len = num_arr.length;
         for(int j=0; j<len; j++){
-            merge += Integer.toString(num_arr.get(len-j-1));
+            merge += num_arr[len-j-1];
         }
         
         answer = Long.parseLong(merge);
