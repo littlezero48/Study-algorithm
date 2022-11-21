@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Solution {
-    public int[] solution(int []arr) {
+    public ArrayList<Integer> solution(int []arr) {
         int[] answer = {};
 
         ArrayList<Integer> arr1 = new ArrayList<Integer>();
@@ -16,11 +16,6 @@ public class Solution {
             }
         }
 
-        answer = new int[arr1.size()];
-        for(int j=0; j<answer.length; j++){
-            answer[j] = arr1.get(j);
-        }
-
-        return answer;
+        return arr1;
     }
 }
