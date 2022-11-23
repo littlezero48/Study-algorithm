@@ -53,7 +53,6 @@ class Solution {
         }
 
         //7단계
-
         int changIDLen = changeID.length();
         if(changIDLen <= 2){
             for(int j=0; j<3-changIDLen; j++){
