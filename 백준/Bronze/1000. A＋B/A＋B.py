@@ -1,5 +1,2 @@
-import sys
-
-#sys=open("input.txt","rt")
-n, m = map(int,sys.stdin.readline().split())
-print(n + m)
+a,b = map(int,input().split())
+print(a+b)
