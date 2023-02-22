@@ -1,9 +1,8 @@
-import datetime
-
 def solution(today, terms, privacies):
     result = []
     t_year, t_month, t_day = today.split('.')
 
+    # 현재 시간과 수집 시간의 날짜 차이와 만료 기간 날짜 간의 차이를 비교
     for i in range(len(privacies)) :
         days = 0
         term_alphabet = privacies[i][-1]
@@ -12,8 +11,6 @@ def solution(today, terms, privacies):
         for term in terms :
             if term[0] == term_alphabet :
                 days = int(term[2:])*28
-
-        print(days)
 
         diff_year = int(t_year) - int(c_year)
         diff_month = int(t_month) - int(c_month)
