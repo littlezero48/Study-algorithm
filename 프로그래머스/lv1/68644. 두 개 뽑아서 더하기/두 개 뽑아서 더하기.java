@@ -1,14 +1,11 @@
 import java.util.ArrayList;
 
 class Solution {
-    public int[] solution(int[] numbers) {
+    public ArrayList<Integer> solution(int[] numbers) {
         int[] arr = new int[201];
         int[] answer = {};
         int zeroCnt = 0;
         for(int i=0; i<numbers.length; i++){
-            if(i == numbers.length){
-                break;
-            }
             for(int j=i+1; j<numbers.length; j++){
                 int idx = numbers[i] + numbers[j];
                 if(idx == 0){
@@ -29,12 +26,7 @@ class Solution {
                 arr1.add(arr[j]);
             }
         }
-
-        answer = new int[arr1.size()];
-        for(int k=0; k<answer.length; k++){
-            answer[k] = arr1.get(k);
-        }
         
-        return answer;
+        return arr1;
     }
 }
