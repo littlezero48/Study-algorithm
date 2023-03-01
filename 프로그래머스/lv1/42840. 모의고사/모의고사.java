@@ -10,10 +10,6 @@ class Solution {
         int[] supoScore = new int[3];
         int supo2Cnt = 1;
 
-        String test1 ="";
-        String test2 ="";
-        String test3 ="";
-
         for(int i=0; i<answers.length; i++){
             //수포자1
             if(answers[i] == (i%5)+1){
