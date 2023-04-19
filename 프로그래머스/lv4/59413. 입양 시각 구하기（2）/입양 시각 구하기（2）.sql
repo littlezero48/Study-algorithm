@@ -1,9 +1,9 @@
 -- 코드를 입력하세요
-SET @HOUR = -1;
+SET @HOUR = -1; # 대입
 SELECT 
     (@HOUR := @HOUR + 1) AS HOUR,
     (SELECT 
-        COUNT(HOUR(DATETIME))
+        COUNT(*)
     FROM ANIMAL_OUTS 
     WHERE HOUR(DATETIME) = @HOUR) AS COUNT
 FROM ANIMAL_OUTS
