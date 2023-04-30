@@ -1,10 +1,2 @@
-def solution(arr, k):
-    answer = []
-    if k % 2 == 0 :
-        for one in arr :
-            answer.append(one + k)
-    else :
-        for one in arr :
-            answer.append(one * k)
-            
-    return answer
+def solution(arr, k):           
+    return [i+k if k % 2 == 0 else i*k for i in arr]
