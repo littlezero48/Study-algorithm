@@ -12,27 +12,14 @@ def solution(begin, end):
     for i in range(begin, end+1):
         # 소수일 경우를 위한 기본세팅 : 1이면 0, 나머지는 1
         block_num = 0 if i == 1 else 1;  
-        # 이 수는 예외상황을 위한 수
-        s_block_num = 0
+        
         # 소수가 아닌 경우 약수 구하기 
         for j in range(2, int(i**0.5)+1): # 효율성 상승 위해 제곱근 까지만 
-            
             if i%j == 0: # 약수인 경우
                 # 처음 만나는 약수로 나눈 목이 가장 큰 최대약수가 되는데 이때 이 숫자가 천만이 안넘으면 대입
                 if i//j <= 10000000: 
                     block_num = i//j
                     break
-                # 분명 약수인데 i//j 값이 천만을 넘어버린 상황 중 j가 천만 아래일 경우를 s_block_num에 대입
-                # 특히 100000014을 기준으로 보면 i//j 값이 16666669라 천만은 넘어버리지만 이 몫을 만든 j는 6밖에 안되므로
-                # 약수로 들어갈 수 있기 때문에 이런 경우 따로 처리
-                # 다만 위 if 조건은 가장 큰값을 바로 찾을 수 있지만 아래 경우 바로 작은값부터 찾기 때문에 for문 끝까지 break를 할수없다
-                elif j <= 10000000:
-                    if j > block_num :
-                        s_block_num = j
-        
-        # 최종적으로 나온 약수들 중 가장 큰 것을 블록 설치 할 수 있도록 값 조정
-        if s_block_num > block_num :
-            block_num = s_block_num        
         
         # 블록 설치
         block.append(block_num)
