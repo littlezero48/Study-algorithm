@@ -1,6 +1,6 @@
 # [level 2] 빛의 경로 사이클 - 86052 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86052) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86052?language=python3) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 05월 19일 17:35:24
+2024년 05월 19일 17:35:59
 
 ### 문제 설명
 
